@@ -3,6 +3,7 @@ import { CategoryList } from './CategoryList'
 import { Link } from 'react-router-dom'
 
 export default class Category extends Component {
+    
     render() {
         const { match } = this.props;
         console.log(match)
