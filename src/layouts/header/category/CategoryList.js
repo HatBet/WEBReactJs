@@ -9,7 +9,6 @@ export const CategoryType ={
     ANA: 'ana'
 };
 
-
 export const CategoryList = [
     {
         categoryId: 0,
@@ -23,7 +22,7 @@ export const CategoryList = [
         categoryName: "İletişim",
         CategoryType: CategoryType.ANA,
         path: '/contact',
-        component: Contact
+        component:Contact
     },
     {
         categoryId: 2,
@@ -37,7 +36,7 @@ export const CategoryList = [
         categoryName: "Outlet",
         CategoryType: CategoryType.ANA,
         path: '/outlet',
-        component: Outlet 
+        component: Outlet
     }
 ];
 

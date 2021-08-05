@@ -11,7 +11,6 @@ import Header from './layouts/header/Header';
 console.warn = () => {};
 export default class App extends Component{
   render(){
-
     return(
       <div className='App'>
           <Router>
