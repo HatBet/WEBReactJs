@@ -3,7 +3,7 @@ import PageWrapper from '../../layouts/pageWrapper';
 
 export default class Contact extends Component {
     render() {
-        const { match } = this.props
+        const { match } = this.props;
         return (
             <PageWrapper match={match}>
                 <div className="ui raised very padded text container segment">
