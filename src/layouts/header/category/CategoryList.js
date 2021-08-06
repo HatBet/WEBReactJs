@@ -19,13 +19,6 @@ export const CategoryList = [
     },
     {
         categoryId: 1,
-        categoryName: "İletişim",
-        CategoryType: CategoryType.ANA,
-        path: '/contact',
-        component:Contact
-    },
-    {
-        categoryId: 2,
         categoryName: "Ürünler",
         CategoryType: CategoryType.ANA,
         path: '/product',
