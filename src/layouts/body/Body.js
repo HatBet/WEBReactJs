@@ -2,7 +2,7 @@ import { Component } from "react"
 
 
 export default class Body extends Component {
-    
+
     state = { currentCategory: "" }
     changeCategory = category => {
         this.setState({ currentCategory: category.categoryName })
@@ -10,9 +10,7 @@ export default class Body extends Component {
     render() {
         return (
             <div>
-
             </div>
-
         )
 
     }

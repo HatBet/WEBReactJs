@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PageWrapper from '../../layouts/pageWrapper'
 
 export default class UICard extends Component {
   

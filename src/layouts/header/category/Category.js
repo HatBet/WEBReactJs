@@ -14,8 +14,8 @@ export default class Category extends Component {
 
         return (
             <div>
-                <div className="ui inverted menu">
-                    { CategoryList.filter(category => category.categoryType !== rootPath).map(category => (
+                <div ip="menu header" className="ui inverted menu">
+                    { CategoryList.filter(category => category.CategoryType !== rootPath).map(category => (
                     <Link to={category.path} className="item"
                         key={`CATEGORY_LINK_${category.categoryId}`}>
                         {category.categoryName}

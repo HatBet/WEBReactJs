@@ -3,6 +3,7 @@ import Product from "../../../components/product/Product"
 import Contact from "../../../components/contact/Contact"
 import Main from "../../../components/main/Main"
 import Outlet from "../../../components/outlet/Outlet"
+import Login from "../../../components/login/Login"
 
 
 export const CategoryType ={
@@ -37,6 +38,27 @@ export const CategoryList = [
         CategoryType: CategoryType.ANA,
         path: '/contact',
         component: Contact
+    },
+    {
+        categoryId:4,
+        categoryName: "",
+        CategoryType:CategoryType.ANA,
+        path:'/',
+        component:Main
+    },
+    {
+        categoryId:5,
+        categoryName:"",
+        CategoryType:CategoryType.ANA,
+        path:'/',
+        component:Main
+    },
+    {
+        categoryId:6,
+        categoryName:"Giriş Yap",
+        CategoryType:CategoryType.ANA,
+        path:'/login',
+        component:Login,
     }
 ];
 
