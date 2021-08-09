@@ -1,19 +1,12 @@
 import { Component } from "react"
 import PageWrapper from "../../layouts/pageWrapper"
 
-export const routes = {
-    login:{
-        path:'/login',
-        title:"Login"
-    },
-    index:{
-        path:'/',
-        title:"admin"
-    }
-}
 
 export default class Login extends Component {
-    
+    state={
+        type: "admin"
+    }
+
     render() {
         const { match } = this.props;
         return (
@@ -37,7 +30,7 @@ export default class Login extends Component {
                                             <i class ="lock icon"></i>
                                         </div>
                                     </div>
-                                    <div class="ui blue submit button">Login</div>
+                                <a class="ui blue submit button" href={this.state.type === "admin" ? "/" :"/index"}>Login</a>
                                 </div>
                             </div>
                             <div class="middle aligned column">

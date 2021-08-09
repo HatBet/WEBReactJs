@@ -14,7 +14,7 @@ export default class Main extends Component {
         const { match } = this.props;
         return (
             <PageWrapper match={match} >
-                <div className="ui raised very padded text container segment">
+                <div className="ui container">
                    {
                        data.map(i=>{
                            return(

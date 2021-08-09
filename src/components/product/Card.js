@@ -1,18 +1,19 @@
 import { Component } from "react"
-import pictures from "./begonvil.jpg"
-
-//image ifadesi birden fazla olduğunda oluşturulması gereken döngü türü?
-//yani birden fazla ürün cardı için
 
 export default class Card extends Component {
     render() {
+        
         const { cardData } = this.props;
         return (
             <div  className="column">
             <div className="ui card">
-                <div className="ui slide masked reveal image">
-                    <img src={pictures} className="visible content" />
-                    <img src={pictures} className="hidden content" />
+                <div className="ui slide masked reveal image flex-row">
+                    { cardData.pictures ? cardData.pictures.map(i => {
+                            return(
+                                <img src={i.pictures} className="visible content" key={i.id} />
+                            )
+                        }): <img src={cardData.picture} className="handle content" />
+                    }
                 </div>
                 <div className="content">
                     <div className="meta">

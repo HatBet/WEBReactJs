@@ -40,20 +40,6 @@ export const CategoryList = [
         component: Contact
     },
     {
-        categoryId:4,
-        categoryName: "",
-        CategoryType:CategoryType.ANA,
-        path:'/',
-        component:Main
-    },
-    {
-        categoryId:5,
-        categoryName:"",
-        CategoryType:CategoryType.ANA,
-        path:'/',
-        component:Main
-    },
-    {
         categoryId:6,
         categoryName:"Giriş Yap",
         CategoryType:CategoryType.ANA,
