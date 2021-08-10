@@ -4,8 +4,6 @@ import PageWrapper from '../../layouts/pageWrapper'
 
 export default class Contact extends Component {
 
-
-
     state = {
         firstname: "",
         lastname: "",
