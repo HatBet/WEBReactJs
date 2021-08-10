@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
+import history from '../../history';
 import { CategoryList } from "../header/category/CategoryList"
 
 export default class Header extends Component {

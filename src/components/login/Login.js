@@ -1,23 +1,24 @@
 import { Component } from "react"
-import history from "../../history";
 import PageWrapper from "../../layouts/pageWrapper"
 import Loading from "../loading/Loading";
 
 
 export default class Login extends Component {
     state = {
-        type: "admasdain",
+        type: "adasdmin",
         loader: false,
     }
 
     onClick = () => {
        this.setState({ loader: true });
-
        if(this.state.type === "admin"){
-        history.push("/")
+        this.props.history.push("/")
        } else{
-        setTimeout(() => this.setState({ loader: false }), 3000);
-        history.push("/index")
+        setTimeout(() => {
+            this.setState({ loader: false })
+            this.props.history.push("/index")
+        } , 3000);
+        
        }
     }
 
@@ -45,9 +46,9 @@ export default class Login extends Component {
                                         </div>
                                     </div>
                                    
-                                     <a className="ui blue submit button" onClick={this.onClick}>
+                                     <button className="ui blue submit button" onClick={() => this.onClick()}>
                                         { this.state.loader ? <Loading />: "Login" }
-                                     </a>
+                                     </button>
                                 </div>
                             </div>
                             <div className="middle aligned column">
