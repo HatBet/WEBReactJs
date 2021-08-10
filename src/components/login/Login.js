@@ -1,10 +1,24 @@
 import { Component } from "react"
+import history from "../../history";
 import PageWrapper from "../../layouts/pageWrapper"
+import Loading from "../loading/Loading";
 
 
 export default class Login extends Component {
-    state={
-        type: "admin"
+    state = {
+        type: "admasdain",
+        loader: false,
+    }
+
+    onClick = () => {
+       this.setState({ loader: true });
+
+       if(this.state.type === "admin"){
+        history.push("/")
+       } else{
+        setTimeout(() => this.setState({ loader: false }), 3000);
+        history.push("/index")
+       }
     }
 
     render() {
@@ -12,35 +26,38 @@ export default class Login extends Component {
         return (
             <PageWrapper match={match}>
                 <div className="ui raised very padded text container segment">
-                    <div class="ui placeholder segment">
-                        <div class="ui two column very relaxed stackable grid">
-                            <div class="column">
-                                <div class="ui form">
-                                    <div class="field">
+                    <div className="ui placeholder segment">
+                        <div className="ui two column very relaxed stackable grid">
+                            <div className="column">
+                                <div className="ui form">
+                                    <div className="field">
                                         <label>Username</label>
-                                        <div class="ui left icon input">
-                                            <input type="text" placeholder="Username"/>
-                                            <i class ="user icon"></i>
+                                        <div className="ui left icon input">
+                                            <input type="text" placeholder="Username" />
+                                            <i className="user icon"></i>
                                         </div>
                                     </div>
-                                    <div class="field">
+                                    <div className="field">
                                         <label>Password</label>
-                                        <div class="ui left icon input">
-                                            <input type="password"/>
-                                            <i class ="lock icon"></i>
+                                        <div className="ui left icon input">
+                                            <input type="password" />
+                                            <i className="lock icon"></i>
                                         </div>
                                     </div>
-                                <a class="ui blue submit button" href={this.state.type === "admin" ? "/" :"/index"}>Login</a>
+                                   
+                                     <a className="ui blue submit button" onClick={this.onClick}>
+                                        { this.state.loader ? <Loading />: "Login" }
+                                     </a>
                                 </div>
                             </div>
-                            <div class="middle aligned column">
-                                <div class="ui big button">
-                                    <i class="signup icon"></i>
+                            <div className="middle aligned column">
+                                <div className="ui big button">
+                                    <i className="signup icon"></i>
                                     Sign Up
                                 </div>
                             </div>
                         </div>
-                        <div class="ui vertical divider">
+                        <div className="ui vertical divider">
                             Or
                         </div>
                     </div>

@@ -8,8 +8,17 @@ export default class Outlet extends Component {
         const { match } = this.props
         return (
             <PageWrapper match={match}>
-                <div class="ui grid">
-                    <div class="eight wide column">
+                <div className="ui grid">
+                    <div className="eight wide column">
+                        <img src={flower} className="ui card" />
+                    </div>
+                    <div className="eight wide column">
+                        <img src={flower} className="ui card" />
+                    </div>
+                    <div className="eight wide column">
+                        <img src={flower} className="ui card" />
+                    </div>
+                    <div className="eight wide column">
                         <img src={flower} className="ui card" />
                     </div>
                   

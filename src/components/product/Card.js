@@ -26,6 +26,9 @@ export default class Card extends Component {
                         {cardData.members} Members
                     </a>
                 </div>
+                <div >
+                    <button className="ui button">Details</button>
+                </div>
             </div>
             </div>
         )

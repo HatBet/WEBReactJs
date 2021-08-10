@@ -6,11 +6,8 @@ export default class Header extends Component {
     render() {
         const routeComponents = CategoryList.map(
             ({ path, component }, key) => (
-              <Route
-                exact
-                path={path}
-                component={component}
-                key={`CATEGORY_LINK_${key}`}
+              <Route exact path={path} component={component}
+              key={`CATEGORY_LINK_${key}`}
               />
             )
           );
