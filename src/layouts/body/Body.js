@@ -9,8 +9,7 @@ export default class Body extends Component {
     }
     render() {
         return (
-            <div>
-            </div>
+            <div ></div>
         )
 
     }

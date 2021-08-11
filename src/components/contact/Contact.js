@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PageWrapper from '../../layouts/pageWrapper'
 
-
 export default class Contact extends Component {
 
     state = {
@@ -32,25 +31,18 @@ export default class Contact extends Component {
         if (email !== undefined) {
             const pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
             if (!pattern.test(email)) {
-                this.setState({ msg: "email adresini formata uygun giriniz(....@....)"})
+                this.setState({ msg: "email adresini formata uygun giriniz(....@....)" })
 
             } else {
                 this.setState({ msg: "işlem başarılı" })
             }
-
         }
-
-
-
-
     }
 
     onChange = (evt) => {
         const { value, name } = evt.target;
         this.setState({ [name]: value });
     }
-
-
 
     render() {
         const { match } = this.props;
@@ -97,12 +89,9 @@ export default class Contact extends Component {
                         <button className="ui blue submit button" type="submit" value="submit" onClick={this.handleSubmit}>
                             Gönder</button>
                     </div>
-                    {
-                        msg === null ? null : <span>{msg}</span>
-                    }
+                    { msg === null ? null : <span>{msg}</span> }
                 </div>
             </PageWrapper>
         )
-
     }
 }

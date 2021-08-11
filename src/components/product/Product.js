@@ -6,7 +6,7 @@ import pic2 from "../outlet/phone.jpg"
 
 
 const cardData = [
-    { id: 0, pictures: [ {id: 0, pictures: pictures},{id: 1, pictures: pic2} ], date: 2014, members: 22 },
+    { id: 0, pictures: [ {id:0, pictures:pictures},{id:1, pictures:pic2} ], date: 2014, members: 22 },
     { id: 1, pictures: [ {id:0, pictures:pictures}, {id:1, pictures:pictures} ], date: 2015, members: 4 },
     { id: 2, pictures: [ {id:0, pictures:pictures}, {id:1, pictures:pic2}], date: 2016, members: 1 },
     { id: 3, pictures: [ {id:0, pictures:pictures}, {id:1, pictures:pic2}], date: 2013, members: 6 },

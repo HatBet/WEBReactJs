@@ -8,9 +8,9 @@ export default class Card extends Component {
             <div  className="column">
             <div className="ui card">
                 <div className="ui slide masked reveal image flex-row">
-                    { cardData.pictures ? cardData.pictures.map(i => {
+                    { cardData.pictures ? cardData.pictures.map(data => {
                             return(
-                                <img src={i.pictures} className="visible content" key={i.id} />
+                                <img src={data.pictures} className="visible content" key={data.id} />
                             )
                         }): <img src={cardData.picture} className="handle content" />
                     }
