@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Component, useState } from "react"
+import { Component } from "react"
 import PageWrapper from "../../layouts/pageWrapper"
 import Loading from "../loading/Loading";
 import SignUP from "./SignUp";
@@ -19,7 +19,7 @@ export default class Login extends Component {
     onClick = () => {
         this.setState({ loader: true });
         this.handleSubmit();
-        if ( !localStorage.user) {
+        if (!localStorage.user) {
             this.props.history.push("/login")
         } else {
             setTimeout(() => {
@@ -35,19 +35,19 @@ export default class Login extends Component {
         )
     }
 
-   
-    handleSubmit = async() => {
-        const  { password, email } = this.state;
+
+    handleSubmit = async () => {
+        const { password, email } = this.state;
         const user = { password, email };
         const headers = {
             'Content-Type': 'application/json',
             'Authorization': 'QpwL5tke4Pnpja7X4'
-          }
-         await axios.post("https://reqres.in/api/login", user, {
+        }
+        await axios.post("https://reqres.in/api/login", user, {
             headers: headers
-          }).then(res => {
+        }).then(res => {
             localStorage.setItem('user', res.data.token);
-          });
+        });
     };
     onChange = (evt) => {
         const { value, name } = evt.target;
@@ -55,7 +55,7 @@ export default class Login extends Component {
     }
 
     render() {
-        const  { password, email } = this.state;
+        const { password, email } = this.state;
         const { match } = this.props;
 
         return (
@@ -68,14 +68,14 @@ export default class Login extends Component {
                                     <div className="field">
                                         <label>Username</label>
                                         <div className="ui left icon input">
-                                            <input type="email" placeholder="E-Mail" name="email" value={email}  onChange={this.onChange} />
+                                            <input type="email" placeholder="E-Mail" name="email" value={email} onChange={this.onChange} />
                                             <i className="user icon"></i>
                                         </div>
                                     </div>
                                     <div className="field">
                                         <label>Password</label>
                                         <div className="ui left icon input">
-                                            <input type="password" value={password} name="password"  onChange={this.onChange} />
+                                            <input type="password" value={password} name="password" onChange={this.onChange} />
                                             <i className="lock icon"></i>
                                         </div>
                                     </div>

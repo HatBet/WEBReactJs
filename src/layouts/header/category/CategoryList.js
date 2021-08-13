@@ -27,9 +27,9 @@ export const CategoryList = [
     },
     {
         categoryId: 2,
-        categoryName: "Outlet",
+        categoryName: "Ürün Ekleme",
         CategoryType: CategoryType.ANA,
-        path: '/outlet',
+        path: '/productlist',
         component: Outlet 
     },
     {
