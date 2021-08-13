@@ -21,6 +21,7 @@ export default class Product extends Component {
         const { match } = this.props
         return (
             <PageWrapper match={match}>
+                <div id="urun">
                 <div className="ui four column doubling stackable grid container">
                     {
                         cardData.map(data => {
@@ -29,6 +30,7 @@ export default class Product extends Component {
                             )
                         })
                     }
+                </div>
                 </div>
             </PageWrapper>
         )
